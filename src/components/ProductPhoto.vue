@@ -1,8 +1,21 @@
 <template>
   <div class="product_photo">
-    <img alt='' :src='currentPhoto' class="photo_main">
+    <img 
+      alt='' 
+      v-lazy="{ src: currentPhoto, loading: pictures[0].url }" 
+      class="photo_main" 
+      width="685" 
+      height="880"
+    >
     <div class="photo_list">
-      <img alt="" :src='photo.url' v-for="photo in pictures" @click="currentPicture(photo.id)">
+      <img 
+        alt="" 
+        v-lazy='photo.url'
+        v-for="photo in pictures" 
+        @click="currentPicture(photo.id)"
+        width="70" 
+        height="90"
+      >
     </div>
   </div>
 </template>

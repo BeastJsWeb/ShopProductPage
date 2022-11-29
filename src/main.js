@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import VueLazyLoad from 'vue3-lazyload'
 import App from '@/App'
 import router from '@/router'
 import components from '@/components/UI'
@@ -14,4 +15,5 @@ icons.forEach(component =>{
 
 app
   .use(router)
+  .use(VueLazyLoad)
   .mount('#app')

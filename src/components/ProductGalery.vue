@@ -4,7 +4,7 @@
     <ul>
       <li v-for="photo in pictures">
         <RouterLink to="">
-          <img alt="" :src='photo'>
+          <img alt="" v-lazy="photo" width="335" height="335">
           <div class="styles_photo-hover">
             <FullScreen/>
             <div>

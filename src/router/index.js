@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import ProductCard from '@/pages/ProductCard.vue'
+const ProductCard = () => import('@/pages/ProductCard.vue')
 
 const routes = [
   {
